@@ -1,3 +1,5 @@
+
+
 exports.getCurrentTime = (req, res, next) => {
 
     let time = new Date().toString();

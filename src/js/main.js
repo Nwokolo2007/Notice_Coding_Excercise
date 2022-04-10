@@ -31,15 +31,33 @@ function setUserName()
     }
     localStorage.setItem("userName",userName);
     let display =  document.getElementById("display");
-    display.innerHTML = userName;
+
+      if(display)
+    {
+        display.innerHTML = userName;
+    }
     return false;
 }
 
  window.onload =  function getUserName()
 {
+    let userEmail =  localStorage.getItem('useremail');
     let userName =  localStorage.getItem("userName");
     let display =  document.getElementById("display");
-    display.innerHTML = userName;
+    let loginButton = document.getElementById('login');
+    if(display)
+    {
+        display.innerHTML = userName;
+    }
+    if(userEmail)
+    {
+        loginButton.style.visibility = 'hidden';
+        document.getElementById('profileName').innerHTML = "Welcome " + userEmail;
+    }
+    else{
+        loginButton.style.visibility = 'visible';
+    }
+   
     return;
 }
 

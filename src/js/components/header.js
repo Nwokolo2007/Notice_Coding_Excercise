@@ -19,7 +19,7 @@ class Header extends HTMLElement {
                 <a class="nav-link" href="/src/views/profile.html">Profile</a>
               </li>
               <li class = "nav-item">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id = "login">
               Login
             </button>
               </li>
@@ -42,7 +42,7 @@ class Header extends HTMLElement {
       <input type="password" class="form-control marginInput" id="password" placeholder="password">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-primary" onclick = loginHandler();>Login</button>
       </div>
     </div>
   </div>
