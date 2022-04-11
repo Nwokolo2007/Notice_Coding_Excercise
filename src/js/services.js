@@ -1,9 +1,10 @@
-let BASE_URL = "http://localhost:8080/";
+let BASE_URL = "https://noticeapi.herokuapp.com/";
 let requestUrl = BASE_URL + "time";
 
 
 function getRequestCurrentTime()
 {
+  console.log(requestUrl);
     fetch(requestUrl)
     .then(res =>{
 
